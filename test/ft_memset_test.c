@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memset_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/15 07:36:43 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/15 08:17:48 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/15 07:36:01 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/15 08:43:14 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+int	main(void)
 {
-	size_t	i;
-	unsigned char conv;
+	void	*b;
+	int		c;
+	size_t	len;
+	void	*result;
 
-	i = 0;
-	conv = c;
-	while (i < len)
-	{
-		((unsigned char*)b)[i++] = conv;
-	}
-	return (b);
+	b = malloc(10);
+	c = 5;
+	len = 7;
+	result = ft_memset(b, c, len);
+	write(1, (char*)result, 10);
+	
+	return (0);
 }
