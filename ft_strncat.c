@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 08:39:48 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/17 08:47:50 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/17 08:45:52 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/17 08:48:49 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	while (s1[i])
 		i++;
-	while (*s2)
+	while (*s2 && n--)
 	{
 		s1[i] = *s2;
 		i++;
