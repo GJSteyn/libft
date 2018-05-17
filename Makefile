@@ -6,12 +6,12 @@
 #    By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/05/17 07:40:01 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/05/17 07:45:55 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
-	   ft_memchr.o
+	   ft_memchr.o ft_memcmp.o
 FLAGS = -Wall -Wextra -Werror
 
 test: $(OBJS)
@@ -28,5 +28,7 @@ ft_memmove.o: ft_memmove.c libft.h
 	gcc -c $(FLAGS) ft_memmove.c
 ft_memchr.o: ft_memchr.c libft.h
 	gcc -c $(FLAGS) ft_memchr.c
+ft_memcmp.o: ft_memcmp.c libft.h
+	gcc -c $(FLAGS) ft_memcmp.c
 clean:
 	rm $(OBJS)
