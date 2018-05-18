@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 08:41:27 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/18 08:44:35 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/18 08:47:10 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,5 @@ char	*strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		len--;
 	}
+	return (NULL);
 }
