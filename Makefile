@@ -6,13 +6,14 @@
 #    By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/05/18 06:46:24 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/05/18 07:02:51 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	   ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o \
-	   ft_strncpy.o ft_strcat.o ft_strncat.o ft_strlcat.o ft_strchr.o
+	   ft_strncpy.o ft_strcat.o ft_strncat.o ft_strlcat.o ft_strchr.o \
+	   ft_strrchr.o
 FLAGS = -Wall -Wextra -Werror
 
 test: $(OBJS)
@@ -47,5 +48,7 @@ ft_strlcat.o: ft_strlcat.c libft.h
 	gcc -c $(FLAGS) ft_strlcat.c
 ft_strchr.o: ft_strchr.c libft.h
 	gcc -c $(FLAGS) ft_strchr.c
+ft_strrchr.o: ft_strrchr.c libft.h
+	gcc -c $(FLAGS) ft_strrchr.c
 clean:
 	rm $(OBJS)
