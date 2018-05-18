@@ -6,13 +6,13 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 06:35:29 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/18 06:45:37 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/18 07:04:54 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	if (c == 0)
 		return (ft_strlen(s) + 1);
