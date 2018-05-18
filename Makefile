@@ -6,7 +6,7 @@
 #    By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/05/18 13:17:16 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/05/18 22:23:32 by gj               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	   ft_strncpy.o ft_strcat.o ft_strncat.o ft_strlcat.o ft_strchr.o \
 	   ft_strrchr.o ft_strstr.o ft_strnstr.o ft_strcmp.o ft_strncmp.o \
 	   ft_atoi.o ft_isupper.o ft_islower.o ft_isalpha.o ft_isdigit.o \
-	   ft_isalnum.o ft_isascii.o ft_isprint.o
+	   ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o
 FLAGS = -Wall -Wextra -Werror
 
 test: $(OBJS)
@@ -76,5 +76,7 @@ ft_isascii.o: ft_isascii.c libft.h
 	gcc -c $(FLAGS) ft_isascii.c
 ft_isprint.o: ft_isprint.c libft.h
 	gcc -c $(FLAGS) ft_isprint.c
+ft_toupper.o: ft_toupper.c libft.h
+	gcc -c $(FLAGS) ft_toupper.c
 clean:
 	rm $(OBJS)
