@@ -24,6 +24,8 @@ int		ft_strcmp(const char *s, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *nptr);
 int		ft_isalpha(int c);
+int		ft_isupper(int c);
+int		ft_islower(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
