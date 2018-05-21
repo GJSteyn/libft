@@ -6,13 +6,13 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 12:35:43 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/18 12:37:28 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/21 09:29:24 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isupper(int c);
+int	ft_isupper(int c)
 {
 	if (c > 64 && c < 91)
 		return (1);

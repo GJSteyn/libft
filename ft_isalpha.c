@@ -6,15 +6,15 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 12:34:31 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/18 12:41:48 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/21 09:30:45 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isalpha(int c)
+int	ft_isalpha(int c)
 {
-	if (ft_isupper(c) && ft_islower(c))
+	if (ft_isupper(c) || ft_islower(c))
 		return (1);
 	else
 		return (0);
