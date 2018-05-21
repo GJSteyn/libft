@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 13:28:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/21 13:42:44 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/21 14:09:32 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/21 14:11:18 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-void	ft_memdel(void **ap)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	if (ap != NULL)
+	while (*s1 && *s2)
 	{
-		free(*ap);
-		*ap = NULL;
+		if (*s1 != *s2)
+			return (0);
 	}
+	return (1);
 }

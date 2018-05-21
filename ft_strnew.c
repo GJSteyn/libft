@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/21 13:37:54 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/21 13:39:31 by gsteyn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strnew(size_t size)
 {
@@ -7,7 +18,7 @@ char	*ft_strnew(size_t size)
 	char	*ret;
 
 	i = 0;
-	ret = (char*)malloc(sizeof(char) * size);
+	ret = (char*)malloc(size);
 	if (!ret)
 		return (NULL);
 	while (i < size)

@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 13:28:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/21 13:42:44 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/21 13:58:04 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/21 14:00:38 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-void	ft_memdel(void **ap)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	if (ap != NULL)
+	unsigned int	i;
+
+	i = 0;
+	while (*s)
 	{
-		free(*ap);
-		*ap = NULL;
+		(*f)(i++, s++);
 	}
 }

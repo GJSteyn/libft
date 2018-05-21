@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 13:28:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/21 13:42:44 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/21 14:50:44 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/21 14:57:33 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-void	ft_memdel(void **ap)
+char	**ft_strsplit(char const *s, char c)
 {
-	if (ap != NULL)
-	{
-		free(*ap);
-		*ap = NULL;
-	}
+	size_t	i;
+	char	*one;
+	char	**full;
+
+	i = 0;
+	while (*s == c)
+		s++;
+	while (*s != c)
+		i++;
 }
