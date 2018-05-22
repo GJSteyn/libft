@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gj <gsteyn@student.wethinkcode.co.za>      +#+  +:+       +#+        */
+/*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 22:33:19 by gj                #+#    #+#             */
-/*   Updated: 2018/05/22 13:17:35 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/22 14:06:30 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/22 14:07:01 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_putchar(char c)
 {
-	if (ft_isupper(c))
-		return (c + 32);
-	else
-		return (c);
+	write(1, &c, 1);
 }

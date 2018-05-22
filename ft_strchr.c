@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 06:35:29 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/21 08:00:00 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/22 13:11:43 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	//if (c == 0)
-	//	return ((char*)s[ft_strlen(s) + 1]);
 	while (*s)
 	{
 		if (*s == c)

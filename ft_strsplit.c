@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 14:50:44 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/22 06:13:15 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/22 13:13:15 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int		strclen(char const *s, char c)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	int		word_len;;
+	int		word_len;
 	int		count;
 	char	*trim;
 	char	*one;
