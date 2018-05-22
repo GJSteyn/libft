@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 14:05:34 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/21 14:09:18 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/22 10:09:22 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	len = ft_strlen(s);
 	ret = (char*)malloc(len);
 	len = 0;
-	while (*s)
+	while (s[len])
 	{
 		ret[len] = (*f)(len, s[len]);
 		len++;
