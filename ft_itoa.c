@@ -6,15 +6,22 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:19:14 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/22 19:32:23 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/23 08:09:21 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_itoa(int n)
+static void	insert(int i1, int i2, int n, char	**res)
+{
+	while (i1 > 0)
+	{
+		(*res)[i2++] = (n / i1) - ((n / i1) / 10 * 10) + 48;
+		i1 /= 10;
+	}
+}
+
+char		*ft_itoa(int n)
 {
 	int		i1;
 	int		i2;
@@ -34,23 +41,10 @@ char	*ft_itoa(int n)
 		i1 *= 10;
 		i2++;
 	}
-	ret = (char*)malloc(i2);
+	ret = (char*)malloc(i2 + pn);
 	i2 = 0;
 	if (pn)
 		ret[i2++] = '-';
-	while (i1 > 0)
-	{
-		ret[i2] = (n / i1) - ((n / i1) / 10 * 10) + 48;
-		i1 /= 10;
-		i2++;
-	}
+	insert(i1, i2, n, &ret);
 	return (ret);
-}
-
-int	main(void)
-{
-	char	*res = ft_itoa(-52342);
-	printf("%s\n", res);
-	free(res);
-	return (0);
 }

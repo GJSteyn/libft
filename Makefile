@@ -6,7 +6,7 @@
 #    By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/05/19 12:12:52 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/05/23 16:42:47 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,76 +17,29 @@ OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	   ft_strncpy.o ft_strcat.o ft_strncat.o ft_strlcat.o ft_strchr.o \
 	   ft_strrchr.o ft_strstr.o ft_strnstr.o ft_strcmp.o ft_strncmp.o \
 	   ft_atoi.o ft_isupper.o ft_islower.o ft_isalpha.o ft_isdigit.o \
-	   ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o
+	   ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o \
+	   ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o \
+	   ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_strequ.o \
+	   ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
+	   ft_itoa.o ft_putchar.o ft_putstr.o ft_putendl.o ft_putnbr.o \
+	   ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
 
 FILES = $(patsubst %.o,%.c,$(OBJS))
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -I. -c
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -rcv $@ $^
+	ar rcs $@ $^
 
-ft_memset.o: ft_memset.c libft.h
-	gcc -c $(FLAGS) ft_memset.c
-ft_bzero.o: ft_bzero.c libft.h
-	gcc -c $(FLAGS) ft_bzero.c
-ft_memcpy.o: ft_memcpy.c libft.h
-	gcc -c $(FLAGS) ft_memcpy.c
-ft_memccpy.o: ft_memcpy.c libft.h
-	gcc -c $(FLAGS) ft_memccpy.c
-ft_memmove.o: ft_memmove.c libft.h
-	gcc -c $(FLAGS) ft_memmove.c
-ft_memchr.o: ft_memchr.c libft.h
-	gcc -c $(FLAGS) ft_memchr.c
-ft_memcmp.o: ft_memcmp.c libft.h
-	gcc -c $(FLAGS) ft_memcmp.c
-ft_strlen.o: ft_strlen.c libft.h
-	gcc -c $(FLAGS) ft_strlen.c
-ft_strdup.o: ft_strdup.c libft.h
-	gcc -c $(FLAGS) ft_strdup.c
-ft_strcpy.o: ft_strcpy.c libft.h
-	gcc -c $(FLAGS) ft_strcpy.c
-ft_strncpy.o: ft_strncpy.c libft.h
-	gcc -c $(FLAGS) ft_strncpy.c
-ft_strcat.o: ft_strcat.c libft.h
-	gcc -c $(FLAGS) ft_strcat.c
-ft_strncat.o: ft_strncat.c libft.h
-	gcc -c $(FLAGS) ft_strncat.c
-ft_strlcat.o: ft_strlcat.c libft.h
-	gcc -c $(FLAGS) ft_strlcat.c
-ft_strchr.o: ft_strchr.c libft.h
-	gcc -c $(FLAGS) ft_strchr.c
-ft_strrchr.o: ft_strrchr.c libft.h
-	gcc -c $(FLAGS) ft_strrchr.c
-ft_strstr.o: ft_strstr.c libft.h
-	gcc -c $(FLAGS) ft_strstr.c
-ft_strnstr.o: ft_strnstr.c libft.h
-	gcc -c $(FLAGS) ft_strnstr.c
-ft_strcmp.o: ft_strcmp.c libft.h
-	gcc -c $(FLAGS) ft_strcmp.c
-ft_strncmp.o: ft_strncmp.c libft.h
-	gcc -c $(FLAGS) ft_strncmp.c
-ft_atoi.o: ft_atoi.c libft.h
-	gcc -c $(FLAGS) ft_atoi.c
-ft_isupper.o: ft_isupper.c libft.h
-	gcc -c $(FLAGS) ft_isupper.c
-ft_islower.o: ft_islower.c libft.h
-	gcc -c $(FLAGS) ft_islower.c
-ft_isalpha.o: ft_isalpha.c libft.h
-	gcc -c $(FLAGS) ft_isalpha.c
-ft_isdigit.o: ft_isdigit.c libft.h
-	gcc -c $(FLAGS) ft_isdigit.c
-ft_isalnum.o: ft_isdigit.c libft.h
-	gcc -c $(FLAGS) ft_isalnum.c
-ft_isascii.o: ft_isascii.c libft.h
-	gcc -c $(FLAGS) ft_isascii.c
-ft_isprint.o: ft_isprint.c libft.h
-	gcc -c $(FLAGS) ft_isprint.c
-ft_toupper.o: ft_toupper.c libft.h
-	gcc -c $(FLAGS) ft_toupper.c
-ft_tolower.o: ft_tolower.c libft.h
-	gcc -c $(FLAGS) ft_tolower.c
+$(OBJS):
+	gcc $(FLAGS) $(FILES)
+
 clean:
 	rm $(OBJS)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all

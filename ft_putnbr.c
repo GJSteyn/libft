@@ -6,13 +6,13 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 05:35:11 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/23 05:36:24 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/23 15:25:24 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int	n)
+void	ft_putnbr(int n)
 {
 	char	*put;
 

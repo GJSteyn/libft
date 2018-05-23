@@ -5,66 +5,65 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 14:50:44 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/22 13:13:15 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/23 09:31:15 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/23 16:37:36 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static int		*word_count(char const *s, char c)
+static int	word_count(char const *s, char c)
 {
-	int		i;
-	char	*in;
+	int	i;
 
 	i = 0;
-	while (*in)
+	while (*s)
 	{
-		if (*in && *in != c)
+		if (*s && *s != c)
 		{
 			i++;
-			while (*in && *in != c)
-				in++;
+			while (*s && *s != c)
+				s++;
 		}
-		if (*in && *in == c)
+		if (*s && *s == c)
 		{
-			while (*in && *in != c)
-				in++;
+			while (*s && *s == c)
+				s++;
 		}
 	}
 	return (i);
 }
 
-static int		strclen(char const *s, char c)
+static int	ft_strclen(char const *s, char c)
 {
 	int		i;
 
+	i = 0;
 	while (s[i] != c && s[i])
 		i++;
 	return (i);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	int		word_len;
-	int		count;
-	char	*trim;
-	char	*one;
+	int		w_len;
+	int		w_count;
+	int		i;
 	char	**full;
 
-	trim = ft_strtrim(s);
-	count = count(trim);
-	full = (char**)malloc(sizeof(char*) * count);
-	count = 0;
-	while (*trim)
+	i = 0;
+	w_count = word_count(s, c);
+	full = (char**)malloc(sizeof(char*) * w_count);
+	while (*s == c)
+		s++;
+	while (*s)
 	{
-		word_len = strclen(trim, c);
-		one = ft_strsub(trim, 0, word_len);
-		full[count++] = one;
-		trim += word_len;
-		while (*trim && *trim == c)
-			*trim++;
-		free(one);
+		w_len = ft_strclen(s, c);
+		full[i++] = ft_strsub(s, 0, w_len);
+		s += w_len;
+		while (*s && *s == c)
+			s++;
 	}
 	return (full);
 }
