@@ -6,13 +6,13 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:19:14 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/23 08:09:21 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/24 06:40:19 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	insert(int i1, int i2, int n, char	**res)
+static void	insert(int i1, int i2, int n, char **res)
 {
 	while (i1 > 0)
 	{
