@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 12:12:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/24 17:05:25 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/24 17:11:24 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_atoi(const char *str)
 	int	neg;
 
 	ans = 0;
-	neg = 0;
+	neg = 1;
 	if (*str == '-')
 	{
-		neg = 1;
+		neg = -1;
 		str++;
 	}
 	while (*str)
@@ -31,9 +31,7 @@ int	ft_atoi(const char *str)
 		ans *= 10;
 		str++;
 	}
-	if (neg)
-		ans *= -1;
-	return (ans / 10);
+	return ((ans / 10) * neg);
 }
 
 int	main(void)
