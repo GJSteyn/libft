@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 14:00:44 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/22 10:03:39 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/25 10:21:47 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*ret;
 
 	len = ft_strlen(s);
-	ret = (char*)malloc(len);
+	ret = ft_memalloc(len + 1);
+	if (!ret)
+		return (NULL);
 	len = 0;
 	while (*s)
 	{

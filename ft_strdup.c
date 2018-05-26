@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 07:58:08 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/24 07:45:27 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/25 10:10:43 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	char	*dup;
 
 	len = ft_strlen(s1);
-	dup = (char*)(ft_memalloc(len));
+	dup = (char*)(ft_memalloc(len + 1));
 	if (!dup)
 	{
 		return (NULL);

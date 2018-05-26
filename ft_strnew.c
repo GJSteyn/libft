@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 13:37:54 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/22 09:03:52 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/25 10:19:39 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnew(size_t size)
 	char	*ret;
 
 	i = 0;
-	ret = (char*)malloc(size);
+	ret = ft_memalloc(size + 1);
 	if (!ret)
 		return (NULL);
 	while (i < size)
