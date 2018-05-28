@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 13:02:55 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/28 10:06:16 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/28 18:56:46 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,19 @@ char	*ft_strtrim(char const *s)
 	char	*ret;
 
 	len = 0;
-	while (*s == ' ' || *s == '\t' || *s == '\n')
+	if (s)
 	{
-		s++;
-		if (!*s)
-			return ((char*)s);
+		while (*s == ' ' || *s == '\t' || *s == '\n')
+		{
+			s++;
+			if (!*s)
+				return ((char*)s);
+		}
+		len = ft_strlen(s) - 1;
+		while (s[len] == ' ' || s[len] == '\t' || s[len] == '\n')
+			len--;
+		ret = ft_strsub(s, 0, len + 1);
+		return (ret);
 	}
-	len = ft_strlen(s) - 1;
-	while (s[len] == ' ' || s[len] == '\t' || s[len] == '\n')
-		len--;
-	ret = ft_strsub(s, 0, len + 1);
-	return (ret);
+	return (NULL);
 }
