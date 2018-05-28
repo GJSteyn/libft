@@ -6,7 +6,7 @@
 #    By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/05/28 10:13:58 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/05/28 18:02:51 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,10 @@ FILES = $(patsubst %.o,%.c,$(OBJS))
 FLAGS = -Wall -Wextra -Werror -I. -c
 
 all: $(NAME)
+
+so: $(NAME)
+	gcc $(FLAGS) -fpic $(FILES)
+	gcc -shared -o libft.so $(OBJS)
 
 $(NAME): $(OBJS)
 	ar rcs $@ $^
