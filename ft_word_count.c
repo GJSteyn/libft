@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_word_count.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/28 11:40:51 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/28 11:55:35 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/28 10:11:24 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/28 10:11:53 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+int		ft_word_count(char const *s, char c)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	i;
+	int	i;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
 	i = 0;
-	if (dstsize < dst_len + 1)
-		return (dstsize + src_len);
-	while (i < dstsize - dst_len - 1)
+	while (*s)
 	{
-		dst[dst_len + i] = src[i];
-		i++;
+		if (*s && *s != c)
+		{
+			i++;
+			while (*s && *s != c)
+				s++;
+		}
+		if (*s && *s == c)
+		{
+			while (*s && *s == c)
+				s++;
+		}
 	}
-	dst[dst_len + i] = '\0';
-	return (dst_len + src_len);
+	return (i);
 }

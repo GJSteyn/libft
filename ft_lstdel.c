@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 05:33:43 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/28 09:46:16 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/28 12:34:46 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 		tmp = hold;
 	}
 	(*del)((*alst)->content, (*alst)->content_size);
+	*alst = NULL;
 }

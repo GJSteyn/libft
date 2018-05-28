@@ -6,44 +6,11 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 09:31:15 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/25 13:08:59 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/28 10:15:16 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-static int	word_count(char const *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (*s)
-	{
-		if (*s && *s != c)
-		{
-			i++;
-			while (*s && *s != c)
-				s++;
-		}
-		if (*s && *s == c)
-		{
-			while (*s && *s == c)
-				s++;
-		}
-	}
-	return (i);
-}
-
-static int	ft_strclen(char const *s, char c)
-{
-	int		i;
-
-	i = 0;
-	while (s[i] != c && s[i])
-		i++;
-	return (i);
-}
 
 char		**ft_strsplit(char const *s, char c)
 {
@@ -53,7 +20,7 @@ char		**ft_strsplit(char const *s, char c)
 	char	**full;
 
 	i = 0;
-	w_count = word_count(s, c);
+	w_count = ft_word_count(s, c);
 	full = (char**)malloc(sizeof(char*) * w_count);
 	if (!full)
 		return (NULL);

@@ -6,13 +6,13 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:19:14 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/24 06:40:19 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/28 12:24:11 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	insert(int i1, int i2, int n, char **res)
+static void	insert(int i1, int i2, long long n, char **res)
 {
 	while (i1 > 0)
 	{
@@ -23,28 +23,30 @@ static void	insert(int i1, int i2, int n, char **res)
 
 char		*ft_itoa(int n)
 {
-	int		i1;
-	int		i2;
-	int		pn;
-	char	*ret;
+	int			i1;
+	int			i2;
+	long long	nn;
+	int			pn;
+	char		*ret;
 
 	i1 = 1;
 	i2 = 0;
+	nn = (long long)n;
 	pn = 0;
 	if (n < 0)
 	{
-		n *= -1;
+		nn *= -1;
 		pn = 1;
 	}
-	while ((n / i1) > 10)
+	while ((nn / i1) > 10)
 	{
 		i1 *= 10;
 		i2++;
 	}
-	ret = (char*)malloc(i2 + pn);
+	ret = ft_memalloc(i2 + 1);
 	i2 = 0;
 	if (pn)
 		ret[i2++] = '-';
-	insert(i1, i2, n, &ret);
+	insert(i1, i2, nn, &ret);
 	return (ret);
 }
