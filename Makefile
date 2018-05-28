@@ -6,7 +6,7 @@
 #    By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/05/28 18:02:51 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/05/28 18:43:21 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,6 @@ clean:
 	rm $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) libft.so
 
 re: fclean all
