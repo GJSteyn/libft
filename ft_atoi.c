@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 12:12:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/25 10:04:49 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/28 09:19:37 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,23 +41,4 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return ((long long int)((ans / 10) * neg));
-}
-
-int		main(void)
-{
-	char	s1[] = "123";
-	char	s2[] = "-123";
-	char	s3[] = "    123";
-	char	s4[] = "    -123";
-	int		i1;
-	int		i2;
-	int		i3;
-	int		i4;
-
-	i1 = ft_atoi(s1);
-	i2 = ft_atoi(s2);
-	i3 = ft_atoi(s3);
-	i4 = ft_atoi(s4);
-	printf("1: %d\n2: %d\n3: %d\n4: %d\n", i1, i2, i3, i4);
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 09:39:46 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/28 09:03:12 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/28 09:19:00 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,29 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char *d = dst;
-	const char *s = src;
-	size_t n = dstsize;
-	size_t dlen;
+	char		*d;
+	const char	*s;
+	size_t		n;
+	size_t		dlen;
 
-	/* Find the end of dst and adjust bytes left but don't go past end */
+	d = dst;
+	s = src;
+	n = dstsize;
 	while (n-- != 0 && *d != '\0')
 		d++;
 	dlen = d - dst;
 	n = dstsize - dlen;
-
 	if (n == 0)
-		return(dlen + strlen(s));
-	while (*s != '\0') {
-		if (n != 1) {
+		return (dlen + strlen(s));
+	while (*s != '\0')
+	{
+		if (n != 1)
+		{
 			*d++ = *s;
 			n--;
 		}
 		s++;
 	}
 	*d = '\0';
-
-	return(dlen + (s - src));	/* count does not include NUL */
+	return (dlen + (s - src));
 }

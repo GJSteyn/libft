@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 08:49:00 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/24 12:39:30 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/28 09:05:39 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
+	if (ft_strlen(s1) == 0 && ft_strlen(s2) == 0)
+		return (0);
 	if (ft_strlen(s1) == 0)
 		return (-1);
 	if (ft_strlen(s2) == 0)
