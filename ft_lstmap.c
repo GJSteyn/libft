@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 05:31:04 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/25 05:31:07 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/29 14:04:51 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	if (!lst)
 		return (NULL);
 	it = (*f)(lst);
+	if (!it)
+		return (NULL);
 	ret = it;
 	while (lst)
 	{
