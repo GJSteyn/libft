@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 12:12:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/28 09:19:37 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/29 11:50:43 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	ft_atoi(const char *str)
 {
 	long long int	ans;
-	int	neg;
+	int				neg;
 
 	ans = 0;
 	neg = 1;
@@ -36,8 +36,7 @@ int	ft_atoi(const char *str)
 			return (-1);
 		if ((ans * neg) < -2147483647)
 			return (0);
-		ans += (*str - 48);
-		ans *= 10;
+		ans = (ans + (*str - 48)) * 10;
 		str++;
 	}
 	return ((long long int)((ans / 10) * neg));
