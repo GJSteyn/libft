@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 05:38:56 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/28 19:00:11 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/29 11:04:41 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
+	size_t	len;
+
 	if (s)
 	{
-		size_t	len;
-
 		len = ft_strlen(s);
 		write(fd, s, len);
 		write(fd, "\n", 1);

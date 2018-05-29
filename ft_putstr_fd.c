@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 05:37:49 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/28 18:59:47 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/29 11:05:12 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
+	size_t	len;
+
 	if (s)
 	{
-		size_t	len;
-
 		len = ft_strlen(s);
 		write(fd, s, len);
 	}
