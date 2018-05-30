@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_geti.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 12:12:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/30 10:02:12 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/30 10:01:50 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/30 10:02:06 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *str)
+int		ft_geti(const char *str, int neg)
 {
-	long long		ans;
-	int				neg;
+	long long	ans;
 
 	ans = 0;
-	neg = 1;
-	if (ft_strlen(str) == 0)
-		return (0);
-	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v' ||
-			*str == '\f' || *str == '\r')
-		str++;
-	if (*str == '-')
+	while (*str)
 	{
-		neg = -1;
+		if (!ft_isdigit(*str))
+			return (ans / 10);
+		if (ans > 2147483647)
+			return (-1);
+		if ((ans * neg) < -2147483647)
+			return (0);
+		ans = (ans + (*str - 48)) * 10;
 		str++;
 	}
-	else if (*str == '+')
-		str++;
-	ans = ft_geti(str, neg);
-	return ((long long)((ans) * neg));
+	return (ans / 10);
 }

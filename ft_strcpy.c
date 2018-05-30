@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 08:04:10 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/24 08:33:16 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/30 10:11:57 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strcpy(char *dst, const char *src)
 
 	i = ft_strlen(src);
 	i1 = 0;
-	while (i1 <= i && dst[i1])
+	while (i1 <= i)
 	{
 		dst[i1] = src[i1];
 		i1++;

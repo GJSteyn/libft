@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 12:12:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/30 10:02:12 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/30 10:02:34 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/30 10:02:59 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *str)
+int		ft_intlen(long c)
 {
-	long long		ans;
-	int				neg;
+	int		i;
 
-	ans = 0;
-	neg = 1;
-	if (ft_strlen(str) == 0)
-		return (0);
-	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v' ||
-			*str == '\f' || *str == '\r')
-		str++;
-	if (*str == '-')
+	if (c == 0)
+		return (1);
+	i = 0;
+	while (c > 0)
 	{
-		neg = -1;
-		str++;
+		c /= 10;
+		i++;
 	}
-	else if (*str == '+')
-		str++;
-	ans = ft_geti(str, neg);
-	return ((long long)((ans) * neg));
+	return (i);
 }

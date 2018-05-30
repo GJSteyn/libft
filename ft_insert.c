@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_insert.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 12:12:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/30 10:02:12 by gsteyn           ###   ########.fr       */
+/*   Created: 2018/05/30 10:03:05 by gsteyn            #+#    #+#             */
+/*   Updated: 2018/05/30 10:03:25 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *str)
+void		ft_insert(char **s, int index, long c)
 {
-	long long		ans;
-	int				neg;
-
-	ans = 0;
-	neg = 1;
-	if (ft_strlen(str) == 0)
-		return (0);
-	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v' ||
-			*str == '\f' || *str == '\r')
-		str++;
-	if (*str == '-')
+	if (c < 0)
 	{
-		neg = -1;
-		str++;
+		(*s)[0] = '-';
+		c *= -1;
 	}
-	else if (*str == '+')
-		str++;
-	ans = ft_geti(str, neg);
-	return ((long long)((ans) * neg));
+	if (c > 0)
+	{
+		(*s)[index - 1] = (c % 10) + 48;
+		c /= 10;
+		index--;
+		ft_insert(s, index, c);
+	}
 }
