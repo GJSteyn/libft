@@ -6,7 +6,7 @@
 #    By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/05/29 13:49:21 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/05/30 10:01:21 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	   ft_itoa.o ft_putchar.o ft_putstr.o ft_putendl.o ft_putnbr.o \
 	   ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 	   ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o \
-	   ft_lstmap.o ft_strclen.o ft_word_count.o
+	   ft_lstmap.o ft_strclen.o ft_word_count.o ft_geti.o ft_intlen.o \
+	   ft_insert.o
 
 FILES = $(patsubst %.o,%.c,$(OBJS))
 
@@ -32,20 +33,20 @@ FLAGS = -Wall -Wextra -Werror -I. -c
 
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	ar rc $@ $^
+
+$(OBJS):
+	gcc -c $(FLAGS) $(FILES)
+
 so: $(NAME)
 	gcc $(FLAGS) -fpic $(FILES)
 	gcc -shared -o libft.so $(OBJS)
 
-$(NAME): $(OBJS)
-	ar rcs $@ $^
-
-$(OBJS):
-	gcc $(FLAGS) $(FILES)
-
 clean:
-	rm $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME) libft.so
+	rm -f libft.a libft.so
 
 re: fclean all
