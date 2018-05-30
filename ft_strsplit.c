@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 09:31:15 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/30 08:09:31 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/30 11:09:15 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char		**ft_strsplit(char const *s, char c)
 	char	**full;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	w_count = ft_word_count(s, c);
 	full = (char**)malloc(sizeof(char*) * (w_count + 1));
 	if (!full)

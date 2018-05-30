@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 13:02:55 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/28 18:56:46 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/30 10:42:33 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s)
 		{
 			s++;
 			if (!*s)
-				return ((char*)s);
+				return (ft_strsub(s, 0, ft_strlen(s)));
 		}
 		len = ft_strlen(s) - 1;
 		while (s[len] == ' ' || s[len] == '\t' || s[len] == '\n')

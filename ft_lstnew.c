@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 05:31:17 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/30 08:06:56 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/30 10:52:31 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 			new->content = malloc(content_size);
 			ft_memcpy(new->content, content, content_size);
 			new->content_size = content_size;
+			new->next = NULL;
 		}
 	}
 	return (new);
