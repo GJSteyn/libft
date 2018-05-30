@@ -6,16 +6,34 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 12:12:20 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/29 11:50:43 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/30 07:29:56 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	ft_atoi(const char *str)
+static int	ft_geti(const char *str, int neg)
 {
-	long long int	ans;
+	long long	ans;
+
+	ans = 0;
+	while (*str)
+	{
+		if (!ft_isdigit(*str))
+			return ((ans / 10) * neg);
+		if (ans > 2147483647)
+			return (-1);
+		if ((ans * neg) < -2147483647)
+			return (0);
+		ans = (ans + (*str - 48)) * 10;
+		str++;
+	}
+	return (ans / 10);
+}
+
+int			ft_atoi(const char *str)
+{
+	long long		ans;
 	int				neg;
 
 	ans = 0;
@@ -28,16 +46,8 @@ int	ft_atoi(const char *str)
 		neg = -1;
 		str++;
 	}
-	while (*str)
-	{
-		if (!ft_isdigit(*str))
-			return ((ans / 10) * neg);
-		if (ans > 2147483647)
-			return (-1);
-		if ((ans * neg) < -2147483647)
-			return (0);
-		ans = (ans + (*str - 48)) * 10;
+	else if (*str == '+')
 		str++;
-	}
-	return ((long long int)((ans / 10) * neg));
+	ans = ft_geti(str, neg);
+	return ((long long)((ans) * neg));
 }
