@@ -6,7 +6,7 @@
 /*   By: gj <gsteyn@student.wethinkcode.co.za>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 10:32:52 by gj                #+#    #+#             */
-/*   Updated: 2018/05/30 07:13:30 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/05/30 10:01:01 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,9 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 int					ft_strclen(char const *s, char c);
 int					ft_word_count(char const *s, char c);
+int					ft_geti(const char *str, int neg);
+int					ft_intlen(long c);
+void				ft_insert(char **s, int index, long c);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
