@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 05:31:17 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/30 10:52:31 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/06/12 06:52:35 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		{
 			new->content = NULL;
 			new->content_size = 0;
+			new->next = NULL;
 		}
 		else if (content_size > 0)
 		{
