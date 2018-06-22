@@ -6,7 +6,7 @@
 /*   By: gj <gsteyn@student.wethinkcode.co.za>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 10:32:52 by gj                #+#    #+#             */
-/*   Updated: 2018/05/30 10:01:01 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/06/22 15:57:39 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *newlst);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+void				ft_putnstr(char *str, size_t n);
+void				ft_putnstr_fd(char *str, int fd, size_t n);
 
 #endif
