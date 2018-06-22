@@ -6,7 +6,7 @@
 #    By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/06/07 06:17:09 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/06/22 16:06:32 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ OBJS = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	   ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o \
 	   ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o \
 	   ft_lstmap.o ft_strclen.o ft_word_count.o ft_geti.o ft_intlen.o \
-	   ft_insert.o
+	   ft_insert.o ft_putnstr.o ft_putnstr_fd.o
 
 FILES = $(patsubst %.o,%.c,$(OBJS))
 
