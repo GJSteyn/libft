@@ -6,19 +6,25 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/02 10:04:50 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/02 10:04:51 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/09 07:00:18 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_only_digits(char const *s)
+int		ft_is_num(char const *s)
 {
-	while (*s)
+	if (*s)
 	{
-		if (!ft_isdigit(*s))
-			return (0);
-		s++;
+		if (*s == '-')
+			s++;
+		while (*s)
+		{
+			if (!ft_isdigit(*s))
+				return (0);
+			s++;
+		}
+		return (1);
 	}
 	return (1);
 }
