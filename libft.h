@@ -6,7 +6,7 @@
 /*   By: gj <gsteyn@student.wethinkcode.co.za>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 10:32:52 by gj                #+#    #+#             */
-/*   Updated: 2018/07/09 06:58:38 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/09 17:46:54 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char				*ft_strnstr(const char *big, const char *lit, size_t len);
 int					ft_strcmp(const char *s, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *nptr);
+long					ft_atol(const char *str);
 int					ft_isalpha(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
