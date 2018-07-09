@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 06:43:46 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/09 06:47:34 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/09 06:52:28 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void		ft_strldel(char ***str)
 	{
 		while (**str)
 		{
-			ft_strdel(**str);
+			ft_strdel(*str);
 			(**str)++;
 		}
 		**str = NULL;
