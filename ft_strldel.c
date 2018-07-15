@@ -6,15 +6,11 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/09 06:43:46 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/09 17:36:23 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/10 06:40:40 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* String list del:
- * Deletes multiple strings (like those created by strplit).
- */
 
 void		ft_strldel(char ***str)
 {
