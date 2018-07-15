@@ -6,7 +6,7 @@
 /*   By: gj <gsteyn@student.wethinkcode.co.za>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 10:32:52 by gj                #+#    #+#             */
-/*   Updated: 2018/07/09 17:46:54 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/15 15:07:11 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ int					ft_lstlen(t_list *lst);
 void				ft_putnstr(char *str, size_t n);
 void				ft_putnstr_fd(char *str, int fd, size_t n);
 int					ft_is_num(char const *s);
+int					ft_abs(int in);
 
 #endif
