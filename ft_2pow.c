@@ -1,8 +1,8 @@
 #include "libft.h"
 
-size_t		ft_2pow(int pow)
+unsigned int	ft_2pow(int pow)
 {
-	size_t		ret;
+	unsigned int	ret;
 
 	if (pow < 0)
 		return (0);
