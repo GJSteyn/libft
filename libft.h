@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/19 08:25:54 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/19 17:18:48 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ int					ft_abs(int in);
 unsigned int			ft_2pow(int pow);
 
 void				ft_error(char *str);
+void				ft_print_bits(void *mem, size_t size);
 
 #endif
