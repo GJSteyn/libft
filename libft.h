@@ -6,7 +6,7 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/19 17:18:48 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/21 18:11:47 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ void				ft_insert(char **s, int index, long c);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstdelcontent(void *content, size_t size);
 void				ft_lstadd(t_list **alst, t_list *newlst);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
