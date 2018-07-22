@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: gsteyn <gsteyn@student.wethinkcode.co.z    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/21 18:11:47 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/22 13:37:24 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ void				ft_lstadd(t_list **alst, t_list *newlst);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_lstlen(t_list *lst);
+void				ft_lstappend(t_list **dst, t_list *ins);
+void				ft_lstinsert(t_list *dst, t_list *ins);
 
 void				ft_putnstr(char *str, size_t n);
 void				ft_putnstr_fd(char *str, int fd, size_t n);
