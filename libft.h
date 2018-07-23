@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsteyn <gsteyn@student.wethinkcode.co.z    +#+  +:+       +#+        */
+/*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/22 13:37:24 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/23 10:27:46 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_vect2
+{
+	int				x;
+	int				y;
+}					t_vect2;
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -106,5 +112,7 @@ unsigned int			ft_2pow(int pow);
 
 void				ft_error(char *str);
 void				ft_print_bits(void *mem, size_t size);
+
+t_vect2				ft_itovect(int x, int y);
 
 #endif
