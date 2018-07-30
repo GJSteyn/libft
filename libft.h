@@ -6,7 +6,7 @@
 /*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/23 10:27:46 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/30 16:57:10 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ void				ft_putnstr(char *str, size_t n);
 void				ft_putnstr_fd(char *str, int fd, size_t n);
 int					ft_is_num(char const *s);
 int					ft_abs(int in);
-unsigned int			ft_2pow(int pow);
+unsigned int		ft_2pow(int pow);
 
 void				ft_error(char *str);
 void				ft_print_bits(void *mem, size_t size);

@@ -6,17 +6,17 @@
 /*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/23 10:26:36 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/23 10:27:21 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/07/30 16:56:31 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_vect2         ft_itovect(int x, int y)
+t_vect2			ft_itovect(int x, int y)
 {
-    t_vect2         ret;
+	t_vect2		ret;
 
-    ret.x = x;
-    ret.y = y;
-    return (ret);
+	ret.x = x;
+	ret.y = y;
+	return (ret);
 }
