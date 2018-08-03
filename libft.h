@@ -6,7 +6,7 @@
 /*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/30 16:57:10 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/08/03 10:45:34 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+
+# define BASE "0123456789abcdef"
 
 typedef struct		s_list
 {
@@ -112,6 +114,8 @@ unsigned int		ft_2pow(int pow);
 
 void				ft_error(char *str);
 void				ft_print_bits(void *mem, size_t size);
+
+void				ft_putnbr_base(long n, int base);
 
 t_vect2				ft_itovect(int x, int y);
 
