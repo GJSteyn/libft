@@ -6,7 +6,7 @@
 /*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/08/06 13:16:54 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/08/08 12:55:54 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void				ft_putnbr_fd(int n, int fd);
 int					ft_strclen(char const *s, char c);
 int					ft_word_count(char const *s, char c);
 int					ft_geti(const char *str, int neg);
-int					ft_intlen(long c);
+int					ft_intlen(long long c);
 void				ft_insert(char **s, int index, long c);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);

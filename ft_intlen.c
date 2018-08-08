@@ -3,22 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 10:02:34 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/30 10:02:59 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/08/08 12:55:30 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_intlen(long c)
+int		ft_intlen(long long c)
 {
 	int		i;
 
 	if (c == 0)
 		return (1);
 	i = 0;
+	if (c < 0)
+	{
+		c *= -1;
+		i++;
+	}
 	while (c > 0)
 	{
 		c /= 10;
