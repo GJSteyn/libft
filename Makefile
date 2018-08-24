@@ -6,11 +6,12 @@
 #    By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/08/24 09:57:37 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/08/24 10:15:57 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+INCLUDES = -I includes
 
 FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	   ft_memchr.c ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c \
@@ -32,7 +33,7 @@ FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 
 OBJS = $(patsubst %.c,%.o,$(FILES))
 
-FLAGS = -Wall -Wextra -Werror -I. -c
+FLAGS = -Wall -Wextra -Werror -c
 
 all: $(NAME)
 
@@ -41,10 +42,10 @@ $(NAME): $(OBJS)
 	ranlib $(NAME)
 
 $(OBJS):
-	gcc -c $(FLAGS) $(FILES)
+	gcc -c $(FLAGS) $(INCLUDES) $(FILES)
 
 so: $(NAME)
-	gcc $(FLAGS) -fpic $(FILES)
+	gcc $(FLAGS) $(INCLUDES) -fpic $(FILES)
 	gcc -shared -o libft.so $(OBJS)
 
 clean:
