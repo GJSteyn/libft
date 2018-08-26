@@ -6,7 +6,7 @@
 /*   By: gsteyn <gsteyn@student.wethinkcode.co.z    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 13:25:05 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/08/26 13:53:17 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/08/26 16:16:21 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include "libft.h"
 
 int					ft_is_num(char const *s);
 int					ft_isalnum(int c);
