@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsteyn <gsteyn@student.wethinkcode.co.z    +#+  +:+       +#+        */
+/*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/08/26 16:13:46 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/09/14 16:52:01 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <inttypes.h>
 # include "stringft.h"
 
 # define BASE "0123456789abcdef"
@@ -40,15 +41,15 @@ void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_itoa(int n);
 void				ft_putchar(char c);
-void				ft_putstr(char const *s);
+size_t				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
-void				ft_putnbr(int n);
+void				ft_putnbr(intmax_t n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 int					ft_geti(const char *str, int neg);
-int					ft_intlen(long long c);
+int					ft_intlen(intmax_t c);
 void				ft_insert(char **s, int index, long c);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
@@ -69,7 +70,7 @@ unsigned int		ft_2pow(int pow);
 void				ft_error(char *str);
 void				ft_print_bits(void *mem, size_t size);
 
-void				ft_putnbr_base(long long n, int base);
+void				ft_putnbr_base(intmax_t n, int base);
 
 t_vect2				ft_itovect(int x, int y);
 

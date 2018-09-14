@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_insert.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 10:03:05 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/30 10:03:25 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/09/04 12:09:11 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <inttypes.h>
 
-void		ft_insert(char **s, int index, long c)
+void		ft_insert(char **s, int index, intmax_t c)
 {
 	if (c < 0)
 	{

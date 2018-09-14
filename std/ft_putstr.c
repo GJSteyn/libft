@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 14:07:13 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/05/28 18:57:38 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/09/04 12:12:55 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+size_t		ft_putstr(char const *s)
 {
 	size_t len;
 
@@ -20,5 +20,7 @@ void	ft_putstr(char const *s)
 	{
 		len = ft_strlen(s);
 		write(1, s, len);
+		return (len);
 	}
+	return (0);
 }

@@ -6,13 +6,14 @@
 /*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 10:02:34 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/08/08 12:55:30 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/09/04 12:57:25 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <inttypes.h>
 
-int		ft_intlen(long long c)
+int		ft_intlen(intmax_t c)
 {
 	int		i;
 
