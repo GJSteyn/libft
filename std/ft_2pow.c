@@ -6,22 +6,20 @@
 /*   By: gsteyn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 07:13:32 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/07/19 07:13:33 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/09/21 12:25:31 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_2pow(int pow)
+unsigned long	ft_2pow(int pow)
 {
-	unsigned int	ret;
+	unsigned long	ret;
 
 	if (pow < 0)
 		return (0);
 	if (pow == 0)
 		return (1);
-	ret = 2;
-	while (--pow)
-		ret *= 2;
-	return (ret);
+	ret = 1;
+	return (ret << pow);
 }
