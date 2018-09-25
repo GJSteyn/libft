@@ -6,7 +6,7 @@
 /*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/09/25 04:51:06 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/09/25 09:35:22 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,9 @@ void				ft_print_bits(void *mem, size_t size);
 void				ft_putnbr_base(intmax_t n, int base);
 
 t_vect2				ft_itovect(int x, int y);
+
+void				ft_quicksort(
+					int (*cmp)(void*, void*),
+					void **ar, int l, int u);
 
 #endif
