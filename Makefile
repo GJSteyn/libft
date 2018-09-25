@@ -6,7 +6,7 @@
 #    By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/09/25 09:36:00 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/09/25 11:03:25 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ STD_SRC :=	ft_memccpy.c ft_atoi.c ft_memalloc.c ft_memdel.c ft_itoa.c \
 			ft_geti.c ft_intlen.c ft_insert.c ft_putnstr.c ft_putnstr_fd.c \
 			ft_lstlen.c ft_atol.c ft_abs.c ft_2pow.c ft_error.c \
 			ft_print_bits.c ft_lstappend.c ft_lstinsert.c \
-			ft_itovect.c ft_putnbr_base.c ft_quicksort.c
+			ft_itovect.c ft_putnbr_base.c ft_quicksort.c ft_lstsort.c
 STR_SRC :=	ft_bzero.c ft_is_num.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 			ft_isdigit.c ft_islower.c ft_isprint.c ft_isupper.c ft_memchr.c \
 			ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strcat.c \

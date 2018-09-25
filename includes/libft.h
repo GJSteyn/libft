@@ -6,7 +6,7 @@
 /*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/16 06:01:35 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/09/25 09:35:22 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/09/25 11:06:34 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,10 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_lstlen(t_list *lst);
 void				ft_lstappend(t_list **dst, void *content, size_t size);
 void				ft_lstinsert(t_list *dst, t_list *ins);
+void				ft_lstsort(
+					int (*cmp)(void *, void*),
+					t_list *lst,
+					size_t lst_len);
 
 void				ft_putnstr(char *str, size_t n);
 void				ft_putnstr_fd(char *str, int fd, size_t n);
