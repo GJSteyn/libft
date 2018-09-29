@@ -3,16 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+         #
+#    By: gsteyn <gsteyn@student.wethinkcode.co.z    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/09/25 11:03:25 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/09/29 23:05:15 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME :=		libft.a
 INCLUDES :=	-I includes
 FLAGS :=	-Wall -Wextra -Werror
+CC =		clang
 
 STD_SRC :=	ft_memccpy.c ft_atoi.c ft_memalloc.c ft_memdel.c ft_itoa.c \
 			ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c ft_putchar_fd.c \
@@ -52,16 +53,10 @@ $(NAME): $(OBJS)
 	ar rc $@ $^
 	ranlib $(NAME)
 
-# $(ODIR)/%.o: src/%.c
-# 	@mkdir -p $(ODIR)
-# 	gcc $(FLAGS) $(INCLUDES) -c $< -o $@
-# $(ODIR)/%.o: src/string/%.c
-# 	@mkdir -p $(ODIR)
-# 	gcc $(FLAGS) $(INCLUDES) -c $< -o $@
 $(ODIR)/%.o: %.c
 	@mkdir -p $(ODIR)
 	@mkdir -p $(addprefix $(ODIR)/, $(dir $<))
-	clang $(FLAGS) $(INCLUDES) -MMD -c $< -o $@
+	$(CC) $(FLAGS) $(INCLUDES) -c $< -o $@
 
 so: $(NAME)
 	gcc $(FLAGS) $(INCLUDES) -fpic $(STD_SRC) $(STR_SRC)
