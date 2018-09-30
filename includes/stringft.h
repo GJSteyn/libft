@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stringft.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsteyn <gsteyn@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gsteyn <gsteyn@student.wethinkcode.co.z    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 13:25:05 by gsteyn            #+#    #+#             */
-/*   Updated: 2018/09/25 09:21:47 by gsteyn           ###   ########.fr       */
+/*   Updated: 2018/09/30 11:58:56 by gsteyn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int					ft_isdigit(int c);
 int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_isprint(int c);
+char				ft_lastchar(char *str);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);

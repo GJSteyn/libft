@@ -6,7 +6,7 @@
 #    By: gsteyn <gsteyn@student.wethinkcode.co.z    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/15 07:42:12 by gsteyn            #+#    #+#              #
-#    Updated: 2018/09/29 23:05:15 by gsteyn           ###   ########.fr        #
+#    Updated: 2018/09/30 11:59:29 by gsteyn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ STR_SRC :=	ft_bzero.c ft_is_num.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 			ft_strjoin.c ft_strlcat.c ft_strldel.c ft_strlen.c ft_strmap.c \
 			ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c \
 			ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c \
-			ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_word_count.c
+			ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_word_count.c \
+			ft_lastchar.c
 PRNT_SRC :=	flags.c format_arg.c format_char.c format_empty.c format_float.c \
 			format_hex.c format_int.c format_oct.c format_percent.c \
 			format_point.c format_string.c format_u_int.c ft_ftoa.c \
